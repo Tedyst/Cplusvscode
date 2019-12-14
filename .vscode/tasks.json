@@ -4,9 +4,12 @@
         {
             "label": "build",
             "type": "shell",
-            "command": "${workspaceFolder}/build.sh",
+            "command": "gcc",
             "args": [
-                "${fileDirname}"
+                "-g",
+                "${fileDirname}/main.cpp",
+                "-o",
+                "${fileDirname}/main.exe"
             ],
             "presentation": {
                 "echo": false,
@@ -21,15 +24,6 @@
             "label": "test",
             "type": "shell",
             "command": "${fileDirname}/main.exe",
-            "options": {
-                "cwd": "${fileDirname}",
-                "shell": {
-                    "executable": "bash",
-                    "args": [
-                        "-c"
-                    ]
-                }
-            },
             "dependsOn": [
                 "build"
             ],

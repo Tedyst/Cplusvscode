@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "configurations": [
         {
-            "name": "GDB Linux",
+            "name": "GDB Debug",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/main.exe",
