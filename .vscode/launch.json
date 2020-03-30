@@ -2,17 +2,14 @@
     "version": "2.0.0",
     "configurations": [
         {
-            "name": "GDB Debug",
+            "name": "GDB Linux",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/main.exe",
-            "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
             "externalConsole": false,
-            "MIMode": "gdb",
-            "miDebuggerPath": "gdb",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
@@ -20,7 +17,10 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "build"
+            "preLaunchTask": "build",
+            "internalConsoleOptions": "neverOpen",
+            "filterStdout": true,
+            "filterStderr": true,
         }
     ]
 }

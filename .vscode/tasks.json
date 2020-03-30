@@ -3,37 +3,23 @@
     "tasks": [
         {
             "label": "build",
-            "type": "shell",
-            "command": "g++",
+            "type": "process",
+            "command": "${workspaceFolder}/build.sh",
             "args": [
-                "-g",
-                "${fileDirname}/main.cpp",
-                "-o",
-                "${fileDirname}/main.exe"
+                "${fileDirname}"
             ],
             "presentation": {
                 "echo": false,
                 "reveal": "silent",
-                "clear": true
+                "clear": true,
+                "showReuseMessage": true,
+                "panel": "shared"
             },
             "problemMatcher": [
                 "$gcc"
-            ]
-        },
-        {
-            "label": "test",
-            "type": "shell",
-            "command": "${fileDirname}/main.exe",
-            "dependsOn": [
-                "build"
             ],
-            "presentation": {
-                "echo": false,
-                "reveal": "always",
-                "clear": true
-            },
             "group": {
-                "kind": "test",
+                "kind": "build",
                 "isDefault": true
             }
         }
